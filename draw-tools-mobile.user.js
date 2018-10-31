@@ -4,6 +4,8 @@
 // @category       Layer
 // @version        0.0.2
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
+// @updateURL      https://github.com/daviszerro/iitc-plugin-draw-tools-mobile/raw/master/draw-tools-mobile.user.js
+// @downloadURL    https://github.com/daviszerro/iitc-plugin-draw-tools-mobile/raw/master/draw-tools-mobile.user.js
 // @description    [0.0.2] Allow drawing things onto the current map so you may plan your next move. Mobile device optimization.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
@@ -5129,7 +5131,7 @@ window.plugin.drawTools.optPaste = function() {
     try {
       // first see if it looks like a URL-format stock intel link, and if so, try and parse out any stock drawn items
       // from the pls parameter
-      if (promptAction.match(new RegExp("^(https?://)?(www\\.)?ingress\\.com/intel.*[?&]pls="))) {
+        if (promptAction.match(new RegExp("^(https?://)?(\w*\.)?ingress\.com/intel.*[?&]pls="))) {
         //looks like a ingress URL that has drawn items...
         var items = promptAction.split(/[?&]/);
         var foundAt = -1;
